@@ -1,8 +1,10 @@
 ###################################################################
-##### MEAN RESULTANT VECTOR LENGTH FOR CIRCULAR OBSERVATIONS  #####
-##### WITH RANK WEIGHTS                                       #####
-#####                                                         #####
-##### Author: Igor Yegin                                      #####
+#                                                                 #
+# MEAN RESULTANT VECTOR LENGTH FOR CIRCULAR OBSERVATIONS          #
+# WITH RANK WEIGHTS                                               #
+#                                                                 #
+# Author: Igor Yegin                                              #
+#                                                                 #
 ###################################################################
 
 rho.weighted <- function(theta, w) {

@@ -1,8 +1,10 @@
 ###################################################################
-##### TRIGONOMETRIC MOMENTS (COSINE AND SINE)                 #####
-##### FOR RANK-WEIGHTED CIRCULAR OBSERVATIONS                 #####
-#####                                                         #####
-##### Author: Igor Yegin                                      #####
+#                                                                 #
+# TRIGONOMETRIC MOMENTS (COSINE AND SINE)                         #
+# FOR RANK-WEIGHTED CIRCULAR OBSERVATIONS                         #
+#                                                                 #
+# Author: Igor Yegin                                              #
+#                                                                 #
 ###################################################################
 
 trig.moment.weighted <- function(theta, w, p = 1, central = FALSE) {

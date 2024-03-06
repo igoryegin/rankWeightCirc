@@ -1,5 +1,5 @@
-\name{moore.vector.test}
-\alias{moore.vector.test}
+\name{moore.test}
+\alias{moore.test}
 \title{Moore's Test}
 \description{
 Performs the Moore's test of circular uniformity for vector data or weighted angular data.

@@ -22,24 +22,15 @@ a numeric vector of weights
 Weighted rho is formally defined as \eqn{\rho_{w}=\sqrt{a_{w}^2+b_{w}^2}}.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns the weighted circular rho of the data
 }
 \references{
-%% ~put references to the literature/web site here ~
 }
 \author{
 Igor Yegin (MSc Social Statistics and Social Research)
 }
 \note{
-%%  ~~further notes~~
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
 \code{\link{trig.moment.weighted}}
 }

@@ -1,6 +1,5 @@
 \name{trig.moment.weighted}
 \alias{trig.moment.weighted}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Trigonometric moments for rank-weighted circular data
 }
@@ -10,7 +9,6 @@ This function computes trigonometric (cosine and sine) moments in the presence o
 \usage{
 trig.moment.weighted(theta, w, p = 1, central = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{theta}{
 a vector of angular observations, or an object of class \emph{circular}
@@ -34,11 +32,7 @@ Furthermore, if we define weighted mean direction as \eqn{\bar{\theta}_{w}=atan2
 This function transforms weights into rank-weights (\eqn{w_{i}=1,...,n}); this ensures that the distribution of radii does not influence circular summary statistics.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a list with two elements: \code{C} (cosine moment), and \code{S} (sine moment)
 }
 \references{
 Pewsey, A., Neuhäuser, M., & Ruxton, G. D. (2013). Circular Statistics in R. OUP Oxford

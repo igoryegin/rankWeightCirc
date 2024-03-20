@@ -8,7 +8,7 @@
 #                                                         #
 ###########################################################
 
-WtCI <- function(stat = c("mu", "rho"), theta, w, alpha) {
+biascor.CI <- function(stat = c("mu", "rho"), theta, w, alpha) {
   stat <- match.arg(stat)
   n <- length(theta)
   a <- sum(w * cos(theta)) / sum(w)

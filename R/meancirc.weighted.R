@@ -7,7 +7,7 @@
 #                                                                 #
 ###################################################################
 
-mu.weighted <- function(theta, w) {
+meancirc.weighted <- function(theta, w) {
   w <- rank(w)
   a <- sum(w * cos(theta)) / sum(w)
   b <- sum(w * sin(theta)) / sum(w)

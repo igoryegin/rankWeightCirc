@@ -10,6 +10,7 @@
 
 biascor.CI <- function(stat = c("mu", "rho"), theta, w, alpha) {
   stat <- match.arg(stat)
+  w <- rank(w)
   n <- length(theta)
   a <- sum(w * cos(theta)) / sum(w)
   a2 <- sum(w * cos(2 * theta)) / sum(w)
@@ -22,12 +23,12 @@ biascor.CI <- function(stat = c("mu", "rho"), theta, w, alpha) {
   if(stat == "rho") {
     rhocorr <- rhobar - (2 * n + 1) / (3 * n + 3) * (1 - a2bar) / (2 * n * rhobar)
     rhosd <- qnorm(1 - alpha/2) * sqrt((2 * n + 1) / (3 * n * (n + 1)) * (1 - 2 * rhobar ^ 2 + a2bar))
-    c("Rho.corrected" = rhocorr, "Lower" = rhocorr - rhosd, "Upper" = rhocorr + rhosd)
+    list(rho = rhocorr, stdev = rhosd, lower = rhocorr - rhosd, upper = rhocorr + rhosd)
   }
   else if(stat == "mu") {
     mucorr <- mu - (2 * n + 1) / (3 * n * (n + 1)) * b2bar / rhobar ^ 2
     musd <- qnorm(1 - alpha/2) * sqrt((2 * n + 1) / (3 * n * (n + 1)) * (1 - a2bar) / rhobar ^ 2)
-    c("Mu.corrected" = mucorr, "Lower" = mucorr - musd, "Upper" = mucorr + musd)
+    list(mu = mucorr, stdev = musd, lower = mucorr - musd, upper = mucorr + musd)
   }
   else
     stop("Incorrect argument name. 'stat' must be either 'mu' or 'rho'")

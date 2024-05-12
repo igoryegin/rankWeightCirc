@@ -8,7 +8,7 @@
 #                                                         #
 ###########################################################
 
-biascor.CI <- function(stat = c("mu", "rho"), theta, w, alpha) {
+biascor.CI <- function(stat = c("mu", "rho"), theta, w, CI.level) {
   stat <- match.arg(stat)
   w <- rank(w)
   n <- length(theta)
@@ -24,15 +24,15 @@ biascor.CI <- function(stat = c("mu", "rho"), theta, w, alpha) {
     rhocorr <- rhobar - (2 * n + 1) / (3 * n + 3) * (1 - a2bar) / (2 * n * rhobar)
     rhosd <- sqrt((2 * n + 1) / (3 * n * (n + 1)) * (1 - 2 * rhobar ^ 2 + a2bar))
     list(rho = rhocorr, stdev = rhosd,
-         lower = rhocorr - qnorm(1 - alpha/2) * rhosd,
-         upper = rhocorr + qnorm(1 - alpha/2) * rhosd)
+         lower = rhocorr - qnorm(1/2 + CI.level/2) * rhosd,
+         upper = rhocorr + qnorm(1/2 + CI.level/2) * rhosd)
   }
   else if(stat == "mu") {
     mucorr <- mu - (2 * n + 1) / (3 * n * (n + 1)) * b2bar / rhobar ^ 2
     musd <- sqrt((2 * n + 1) / (3 * n * (n + 1)) * (1 - a2bar) / rhobar ^ 2)
     list(mu = mucorr, stdev = musd,
-         lower = mucorr - qnorm(1 - alpha/2) * musd,
-         upper = mucorr + qnorm(1 - alpha/2) * musd)
+         lower = mucorr - qnorm(1/2 + CI.level/2) * musd,
+         upper = mucorr + qnorm(1/2 + CI.level/2) * musd)
   }
   else
     stop("Incorrect argument name. 'stat' must be either 'mu' or 'rho'")

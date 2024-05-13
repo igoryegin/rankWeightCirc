@@ -10,13 +10,9 @@ meanplot <- function(theta, w, CI.level, ...) {
   colarg <- rank(w) / max(rank(w))
   rhoW <- biascor.CI("rho", theta, w, CI.level)
   muW <- biascor.CI("mu", theta, w, CI.level)
-  plot(x = cos(seq(-pi, pi, pi/1000)), y = sin(seq(-pi, pi, pi/1000)),
-        col = "lightgrey", type = "l")
-  points(cos(theta), sin(theta), pch = 16, axes = FALSE,
+  plot(cos(theta), sin(theta), pch = 16, axes = FALSE,
        col = rgb(0, 0, 0, alpha = colarg), xlim = c(-1, 1), ylim = c(-1, 1),
        xlab = "", ylab = "", ...)
-  lines(x = cos(seq(-pi, pi, pi/1000)), y = sin(seq(-pi, pi, pi/1000)),
-        col = "lightgrey", type = "l")
   mtext("All", side = 1)
   mtext("Left", side = 2)
   mtext("None", side = 3)

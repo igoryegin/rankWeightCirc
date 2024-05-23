@@ -13,10 +13,6 @@ meanplot <- function(theta, w, CI.level, ...) {
   plot(cos(theta), sin(theta), pch = 16, axes = FALSE,
        col = rgb(0, 0, 0, alpha = colarg), xlim = c(-1, 1), ylim = c(-1, 1),
        xlab = "", ylab = "", ...)
-  mtext("All", side = 1)
-  mtext("Left", side = 2)
-  mtext("None", side = 3)
-  mtext("Right", side = 4)
   abline(h = 0)
   abline(v = 0)
   arrows.circular(muW$mu, pch = 4, lwd = 1.5, angle = 10)

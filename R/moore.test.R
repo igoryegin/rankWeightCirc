@@ -16,7 +16,7 @@ moore.test <- function(x, w, p.value = c("asymptotic", "simulated")) {
   p.value <- match.arg(p.value)
   X <- x
   n <- length(x)
-  W <- rank(w)
+  W <- rank(w, ties.method = "first")
   statistic <- function(x, w) {
     ss <- sum(w * sin(x))
     cc <- sum(w * cos(x))

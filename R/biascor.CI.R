@@ -10,7 +10,7 @@
 
 biascor.CI <- function(stat = c("mu", "rho"), theta, w, CI.level) {
   stat <- match.arg(stat)
-  w <- rank(w, ties.method = "random")
+  w <- rank(w, ties.method = "first")
   n <- length(theta)
   a <- sum(w * cos(theta)) / sum(w)
   a2 <- sum(w * cos(2 * theta)) / sum(w)

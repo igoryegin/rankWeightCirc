@@ -8,7 +8,7 @@
 ###################################################################
 
 rho.weighted <- function(theta, w) {
-  w <- rank(w)
+  w <- rank(w, ties.method = "first")
   a <- sum(w * cos(theta)) / sum(w)
   b <- sum(w * sin(theta)) / sum(w)
   sqrt(a^2 + b^2)

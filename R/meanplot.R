@@ -6,7 +6,7 @@
 #                                                         #
 ###########################################################
 
-meanplot <- function(theta, w, CI.level, ...) {
+meanplot <- function(theta, w, CI.level, arrow.col = "black", ci.band = TRUE, ...) {
   colarg <- rank(w) / max(rank(w))
   rhoW <- biascor.CI("rho", theta, w, CI.level)
   muW <- biascor.CI("mu", theta, w, CI.level)
@@ -15,9 +15,11 @@ meanplot <- function(theta, w, CI.level, ...) {
        xlab = "", ylab = "", ...)
   abline(h = 0)
   abline(v = 0)
-  arrows.circular(muW$mu, pch = 4, lwd = 1.5, angle = 10)
-  segments(x0 = 0, y0 = 0, x1 = cos(muW$lower), y1 = sin(muW$lower),
-           lty = 2)
-  segments(x0 = 0, y0 = 0, x1 = cos(muW$upper), y1 = sin(muW$upper),
-           lty = 2)
+  arrows.circular(muW$mu, pch = 4, lwd = 1.5, angle = 10, col = arrow.col)
+  if(ci.band) {
+    segments(x0 = 0, y0 = 0, x1 = cos(muW$lower), y1 = sin(muW$lower),
+             lty = 2)
+    segments(x0 = 0, y0 = 0, x1 = cos(muW$upper), y1 = sin(muW$upper),
+             lty = 2)
+  }
 }

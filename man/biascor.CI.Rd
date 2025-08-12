@@ -1,4 +1,5 @@
 \name{biascor.CI}
+\alias{biascor.CI}
 \title{
 Bias-Corrected Confidence Intervals For Some Rank-Weighted Summary Statistics
 }

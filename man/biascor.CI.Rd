@@ -44,7 +44,7 @@ confidence level; a number between 0 and 1
 %% ~put references to the literature/web site here ~
 }
 \author{
-Igor Yegin (MSC Social Statistics and Social Research)
+Igor Yegin (MSc Social Statistics and Social Research)
 }
 \note{
 %%  ~~further notes~~
@@ -59,7 +59,7 @@ Igor Yegin (MSC Social Statistics and Social Research)
 library(circular)
 library(rankWeightCirc)
 set.seed(2025)
-theta <- rcardioid(40, mu = circular(pi/2), rho = 0.2)
+theta <- rcardioid(60, mu = circular(pi/2), rho = 0.2)
 w <- rexp(60)
 biascor.CI(theta = theta, w = w, CI.level = 0.9)
 biascor.CI(theta = theta, w = w, CI.level = 0.95)

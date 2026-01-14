@@ -9,6 +9,10 @@
 ###########################################################
 
 biascor.CI <- function(stat = c("mu", "rho"), theta, w, CI.level = 0.95) {
+  if(!is.numeric(w))
+    stop("'w' must be numeric")
+  if(CI.level <= 0 | CI.level >= 1)
+    stop("'CI.level' must be in (0, 1)")
   stat <- match.arg(stat)
   w <- rank(w, ties.method = "first")
   n <- length(theta)

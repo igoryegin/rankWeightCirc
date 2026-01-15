@@ -8,7 +8,7 @@ Normally, the point estimates of mean direction and mean resultant length are bi
 The bias term increases substantially if the population counterpart is
 close to zero (i.e., if the angles are scattered around the circle quasi-uniformly), so failure to account for the bias may lead to inaccure confidence interval bands.
 
-This function computes a confidence interval for either rank-weighted mean direction or rank-weighted mean resultant length while removing the bias term at the same time.
+This function computes an approximately unbiased confidence interval for a chosen circular summary statistic.
 }
 \usage{
 biascor.CI(stat = c("mu", "rho"), theta, w, CI.level)

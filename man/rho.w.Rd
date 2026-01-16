@@ -1,5 +1,5 @@
-\name{rho.weighted}
-\alias{rho.weighted}
+\name{rho.w}
+\alias{rho.w}
 \title{
 Mean resultant vector length (circular rho) for rank-weighted data
 }
@@ -7,7 +7,7 @@ Mean resultant vector length (circular rho) for rank-weighted data
 This function calculates mean resultant vector length in the presence of rank weights, i.e. weights that take integer values from 1 to N (N = sample size)
 }
 \usage{
-rho.weighted(theta, w)
+rho.w(theta, w)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,10 +19,10 @@ a numeric vector of weights
 }
 }
 \details{
-Weighted rho is formally defined as \eqn{\rho_{w}=\sqrt{a_{w}^2+b_{w}^2}}.
+Weighted rho is formally defined as \deqn{\rho_{w}=\sqrt{(a^{(w)})^2+(b^{(w)})^2}}
 }
 \value{
-Returns the weighted circular rho of the data
+Returns the weighted circular rho of a vector
 }
 \references{
 }
@@ -39,5 +39,5 @@ library(circular)
 VM <- rvonmises(300, circular(0), 1)
 weights <- sample(1:300)
 rho.circular(VM)
-rho.weighted(VM, weights)
+rho.w(VM, weights)
 }

@@ -1,5 +1,5 @@
-\name{trig.moment.weighted}
-\alias{trig.moment.weighted}
+\name{trig.moment.w}
+\alias{trig.moment.w}
 \title{
 Trigonometric moments for rank-weighted circular data
 }
@@ -7,7 +7,7 @@ Trigonometric moments for rank-weighted circular data
 This function computes trigonometric (cosine and sine) moments in the presence of weights. Each of the N weights is transformed into its respective rank, i.e., an integer from 1 to N.
 }
 \usage{
-trig.moment.weighted(theta, w, p = 1, central = FALSE)
+trig.moment.w(theta, w, p = 1, central = FALSE)
 }
 \arguments{
   \item{theta}{
@@ -54,17 +54,17 @@ library(circular)
 
 CU <- rcircularuniform(150)
 W <- rexp(150, 2)
-trig.moment.weighted(CU, W, p = 1, central = FALSE)
+trig.moment.w(CU, W, p = 1, central = FALSE)
 
 VM <- rvonmises(150, mu = circular(pi/2), kappa = 2/3)
 W <- runif(150)
 
-trig.moment.weighted(CU, W, p = 1, central = TRUE)
-trig.moment.weighted(CU, W, p = 2, central = TRUE)
+trig.moment.w(CU, W, p = 1, central = TRUE)
+trig.moment.w(CU, W, p = 2, central = TRUE)
 
 VM <- sort(VM)
 W <- sort(W)
-trig.moment.weighted(CU, W, p = 2, central = TRUE)
+trig.moment.w(CU, W, p = 2, central = TRUE)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
 % \keyword{ ~kwd1 }

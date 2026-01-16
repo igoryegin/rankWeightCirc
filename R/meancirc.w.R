@@ -7,7 +7,7 @@
 #                                                                 #
 ###################################################################
 
-meancirc.weighted <- function(theta, w) {
+meancirc.w <- function(theta, w) {
   w <- rank(w, ties.method = "first")
   a <- sum(w * cos(theta)) / sum(w)
   b <- sum(w * sin(theta)) / sum(w)

@@ -6,10 +6,9 @@
 # Author: Igor Yegin                                      #
 #                                                         #
 ###########################################################
-
+#' @export
+#' @import circular
 moore.test <- function(x, w, p.value = c("asymptotic", "simulated")) {
-  require(circular)
-  require(boot)
   if(!is.null(w) & length(x) != length(w))
     stop("Vector of angles (x) and vector of weights/lengths (w) must have equal number of elements")
   INPUT <- deparse(substitute(x))

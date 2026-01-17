@@ -7,6 +7,7 @@
 #                                                                 #
 ###################################################################
 
+#' @export
 rho.w <- function(theta, w) {
   w <- rank(w, ties.method = "first")
   a <- sum(w * cos(theta)) / sum(w)

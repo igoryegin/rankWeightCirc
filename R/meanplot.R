@@ -5,7 +5,9 @@
 # Author: Igor Yegin                                      #
 #                                                         #
 ###########################################################
-
+#' @export
+#' @import graphics
+#' @import grDevices
 meanplot <- function(theta, w, CI.level, arrow.col = "black", ci.band = TRUE, ...) {
   colarg <- rank(w) / max(rank(w))
   rhoW <- biascor.CI("rho", theta, w, CI.level)

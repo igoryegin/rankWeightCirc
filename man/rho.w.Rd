@@ -32,7 +32,7 @@ Igor Yegin (MSc Social Statistics and Social Research)
 \note{
 }
 \seealso{
-\code{\link{trig.moment.weighted}}
+\code{\link{trig.moment.w}}
 }
 \examples{
 library(circular)

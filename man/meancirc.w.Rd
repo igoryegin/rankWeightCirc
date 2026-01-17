@@ -33,7 +33,7 @@ Igor Yegin
 \note{
 }
 \seealso{
-\code{\link{trig.moment.weighted}}
+\code{\link{trig.moment.w}}
 }
 \examples{
 library(circular)

@@ -9,6 +9,7 @@
 ###########################################################
 
 #' @export
+#' @importFrom stats qnorm pchisq
 biascor.CI <- function(stat = c("mu", "rho"), theta, w, CI.level = 0.95) {
   if(!is.numeric(w))
     stop("'w' must be numeric")

@@ -21,11 +21,11 @@ Performs the Moore's test of circular uniformity for vector data or weighted ang
 library(circular)
 x <- rcircularuniform(100)
 w <- runif(100, 0.3, 1)
-moore.vector.test(x = x, w = w)
+moore.test(x = x, w = w)
 
 x <- sort(rcircularuniform(100))
 w <- sort(runif(100, 0.3, 1))
-moore.vector.test(x = x, w = w)
+moore.test(x = x, w = w)
 }
 \references{
 Moore, B. R. (1980). A Modification of the Rayleigh Test for Vector Data. Biometrika, 67(1), 175–180.

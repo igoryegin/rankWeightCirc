@@ -38,16 +38,7 @@ Returns a list with two elements: \code{C} (cosine moment), and \code{S} (sine m
 Pewsey, A., Neuhäuser, M., & Ruxton, G. D. (2013). Circular Statistics in R. OUP Oxford
 }
 \author{
-Igor Yegin (MSc Social Statistics and Social Research)
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Igor Yegin
 }
 \examples{
 library(rankWeightCirc)

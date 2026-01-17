@@ -8,7 +8,7 @@
 ###################################################################
 
 #' @export
-trig.moment.weighted <- function(theta, w, p = 1, central = FALSE) {
+trig.moment.w <- function(theta, w, p = 1, central = FALSE) {
   if(central) {
     a <- sum(w * cos(theta)) / sum(w)
     b <- sum(w * sin(theta)) / sum(w)

@@ -1,7 +1,7 @@
 ###########################################################
 #                                                         #
-# VISUALISING RANK-WEIGHTED CIRCULAR DATA                 #
-#                                                         #
+# VISUALISING MEAN DIRECTION FOR                          #
+# RANK-WEIGHTED CIRCULAR DATA                             #
 # Author: Igor Yegin                                      #
 #                                                         #
 ###########################################################

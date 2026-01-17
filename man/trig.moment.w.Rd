@@ -50,8 +50,8 @@ Igor Yegin (MSc Social Statistics and Social Research)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
+library(rankWeightCirc)
 library(circular)
-
 CU <- rcircularuniform(150)
 W <- rexp(150, 2)
 trig.moment.w(CU, W, p = 1, central = FALSE)
